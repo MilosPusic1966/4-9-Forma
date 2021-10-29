@@ -60,7 +60,7 @@ namespace _4_9_Forma
             
             
             SqlConnection veza = new SqlConnection(CS);
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, ime, prezime, ocena FROM ucenik", veza);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, ime, prezime, ocena FROM ucenik ORDER BY id", veza);
             adapter.Fill(ucenik);
             // MessageBox.Show(ucenik.Rows.Count.ToString());
             Osvezi();
@@ -103,6 +103,39 @@ namespace _4_9_Forma
             ucenik.Clear();
             adapter.Fill(ucenik);
             red = ucenik.Rows.Count - 1;
+            Osvezi();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string pom = "DELETE FROM Ucenik WHERE id = " + txt_id.Text;
+            SqlConnection veza = new SqlConnection(CS);
+            SqlCommand naredba = new SqlCommand(pom, veza);
+            veza.Open();
+            naredba.ExecuteNonQuery();
+            veza.Close();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, ime, prezime, ocena FROM ucenik ORDER BY id", veza);
+            ucenik.Clear();
+            adapter.Fill(ucenik);
+            if (red > ucenik.Rows.Count - 1)
+            {
+                red = ucenik.Rows.Count - 1;
+            }
+            Osvezi();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string pom = "UPDATE Ucenik SET ime='" + txt_ime.Text + "', prezime='" + txt_prezime.Text + "', ocena=" + txt_ocena.Text +"WHERE id="+txt_id.Text;
+            // MessageBox.Show(pom);
+            SqlConnection veza = new SqlConnection(CS);
+            SqlCommand naredba = new SqlCommand(pom, veza);
+            veza.Open();
+            naredba.ExecuteNonQuery();
+            veza.Close();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, ime, prezime, ocena FROM ucenik ORDER BY id", veza);
+            ucenik.Clear();
+            adapter.Fill(ucenik);
             Osvezi();
         }
     }

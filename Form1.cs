@@ -23,6 +23,9 @@ namespace _4_9_Forma
             DataTable ucenik = new DataTable();
             string CS = "Data source=INF_4_PROFESOR\\SQLPBG; Initial catalog=MilosP2021; Integrated security=true";
             SqlConnection veza = new SqlConnection(CS);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, ime, prezime, ocena FROM ucenik", veza);
+            adapter.Fill(ucenik);
+            // MessageBox.Show(ucenik.Rows.Count.ToString());
 
 
         }

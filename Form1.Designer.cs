@@ -48,6 +48,7 @@ namespace _4_9_Forma
             // 
             // txt_id
             // 
+            this.txt_id.Enabled = false;
             this.txt_id.Location = new System.Drawing.Point(193, 69);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(139, 20);
@@ -128,6 +129,7 @@ namespace _4_9_Forma
             this.btn_prev.TabIndex = 9;
             this.btn_prev.Text = "<";
             this.btn_prev.UseVisualStyleBackColor = true;
+            this.btn_prev.Click += new System.EventHandler(this.btn_prev_Click);
             // 
             // button1
             // 
@@ -137,6 +139,7 @@ namespace _4_9_Forma
             this.button1.TabIndex = 10;
             this.button1.Text = ">>";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -146,6 +149,7 @@ namespace _4_9_Forma
             this.button2.TabIndex = 11;
             this.button2.Text = "<<";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 

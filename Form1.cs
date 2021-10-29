@@ -15,6 +15,7 @@ namespace _4_9_Forma
     {
         public int red = 0;
         DataTable ucenik = new DataTable();
+        string CS = "Data source=INF_4_PROFESOR\\SQLPBG; Initial catalog=MilosP2021; Integrated security=true";
         public Form1()
         {
             InitializeComponent();
@@ -57,7 +58,7 @@ namespace _4_9_Forma
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            string CS = "Data source=INF_4_PROFESOR\\SQLPBG; Initial catalog=MilosP2021; Integrated security=true";
+            
             SqlConnection veza = new SqlConnection(CS);
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, ime, prezime, ocena FROM ucenik", veza);
             adapter.Fill(ucenik);
@@ -86,6 +87,22 @@ namespace _4_9_Forma
         private void button2_Click(object sender, EventArgs e)
         {
             red = 0;
+            Osvezi();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string pom = "INSERT INTO Ucenik (ime, prezime, ocena) VALUES ('" + txt_ime.Text + "', '" + txt_prezime.Text + "', " + txt_ocena.Text+")";
+            // MessageBox.Show(pom);
+            SqlConnection veza = new SqlConnection(CS);
+            SqlCommand naredba = new SqlCommand(pom, veza);
+            veza.Open();
+            naredba.ExecuteNonQuery();
+            veza.Close();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, ime, prezime, ocena FROM ucenik ORDER BY id", veza);
+            ucenik.Clear();
+            adapter.Fill(ucenik);
+            red = ucenik.Rows.Count - 1;
             Osvezi();
         }
     }

@@ -26,7 +26,16 @@ namespace _4_9_Forma
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, ime, prezime, ocena FROM ucenik", veza);
             adapter.Fill(ucenik);
             // MessageBox.Show(ucenik.Rows.Count.ToString());
+            txt_id.Text = ucenik.Rows[0]["id"].ToString();
+            txt_ime.Text = ucenik.Rows[0]["ime"].ToString();
+            txt_prezime.Text = ucenik.Rows[0]["prezime"].ToString();
+            txt_ocena.Text = ucenik.Rows[0]["ocena"].ToString();
 
+
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
 
         }
     }

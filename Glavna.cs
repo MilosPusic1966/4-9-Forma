@@ -43,7 +43,13 @@ namespace _4_9_Forma
 
         private void grid1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sifarnik novi = new Sifarnik();
+            Sifarnik novi = new Sifarnik("predmet");
+            novi.ShowDialog();
+        }
+
+        private void ocenaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sifarnik novi = new Sifarnik("ocena_ok");
             novi.ShowDialog();
         }
     }

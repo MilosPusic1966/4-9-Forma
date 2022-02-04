@@ -17,15 +17,17 @@ namespace _4_9_Forma
         string CS = ConfigurationManager.ConnectionStrings["CSSkola"].ConnectionString;
         SqlDataAdapter adapter;
         DataTable podaci;
-        public Sifarnik()
+        string tabela;
+        public Sifarnik(string naziv)
         {
             InitializeComponent();
+            tabela = naziv;
         }
 
         private void Sifarnik_Load(object sender, EventArgs e)
         {
             SqlConnection veza = new SqlConnection(CS);
-            adapter = new SqlDataAdapter("SELECT * FROM predmet", veza);
+            adapter = new SqlDataAdapter("SELECT * FROM " + tabela, veza); ;
             podaci = new DataTable();
             adapter.Fill(podaci);
             dataGridView1.DataSource = podaci;

@@ -40,6 +40,7 @@ namespace _4_9_Forma
             this.cetvrtiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grid1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocenaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,8 @@ namespace _4_9_Forma
             this.formeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.prvaToolStripMenuItem,
             this.saFKToolStripMenuItem,
-            this.grid1ToolStripMenuItem});
+            this.grid1ToolStripMenuItem,
+            this.ocenaToolStripMenuItem});
             this.formeToolStripMenuItem.Name = "formeToolStripMenuItem";
             this.formeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.formeToolStripMenuItem.Text = "Forme";
@@ -127,6 +129,13 @@ namespace _4_9_Forma
             this.grid1ToolStripMenuItem.Text = "Grid 1";
             this.grid1ToolStripMenuItem.Click += new System.EventHandler(this.grid1ToolStripMenuItem_Click);
             // 
+            // ocenaToolStripMenuItem
+            // 
+            this.ocenaToolStripMenuItem.Name = "ocenaToolStripMenuItem";
+            this.ocenaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ocenaToolStripMenuItem.Text = "Godina";
+            this.ocenaToolStripMenuItem.Click += new System.EventHandler(this.ocenaToolStripMenuItem_Click);
+            // 
             // Glavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,5 +167,6 @@ namespace _4_9_Forma
         private System.Windows.Forms.ToolStripMenuItem treciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cetvrtiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grid1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ocenaToolStripMenuItem;
     }
 }

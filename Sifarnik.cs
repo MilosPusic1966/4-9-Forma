@@ -32,5 +32,11 @@ namespace _4_9_Forma
             // dataGridView1.Columns["id"].ReadOnly = true;
             // dataGridView1.Columns["id"].Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable menjano = podaci.GetChanges();
+            dataGridView2.DataSource = menjano;
+        }
     }
 }

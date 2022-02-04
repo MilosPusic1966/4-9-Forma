@@ -40,5 +40,11 @@ namespace _4_9_Forma
             FormFK nova = new FormFK();
             nova.Show();
         }
+
+        private void grid1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sifarnik novi = new Sifarnik();
+            novi.ShowDialog();
+        }
     }
 }

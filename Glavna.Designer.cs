@@ -31,14 +31,15 @@ namespace _4_9_Forma
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izvestajiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.obradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prvaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saFKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izvestajiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.treciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cetvrtiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.obradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grid1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,27 +59,11 @@ namespace _4_9_Forma
             // 
             this.formeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.prvaToolStripMenuItem,
-            this.saFKToolStripMenuItem});
+            this.saFKToolStripMenuItem,
+            this.grid1ToolStripMenuItem});
             this.formeToolStripMenuItem.Name = "formeToolStripMenuItem";
             this.formeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.formeToolStripMenuItem.Text = "Forme";
-            // 
-            // izvestajiToolStripMenuItem
-            // 
-            this.izvestajiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.prviToolStripMenuItem,
-            this.drugiToolStripMenuItem,
-            this.treciToolStripMenuItem,
-            this.cetvrtiToolStripMenuItem});
-            this.izvestajiToolStripMenuItem.Name = "izvestajiToolStripMenuItem";
-            this.izvestajiToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.izvestajiToolStripMenuItem.Text = "Izvestaji";
-            // 
-            // obradeToolStripMenuItem
-            // 
-            this.obradeToolStripMenuItem.Name = "obradeToolStripMenuItem";
-            this.obradeToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.obradeToolStripMenuItem.Text = "Obrade";
             // 
             // prvaToolStripMenuItem
             // 
@@ -94,29 +79,53 @@ namespace _4_9_Forma
             this.saFKToolStripMenuItem.Text = "Sa FK";
             this.saFKToolStripMenuItem.Click += new System.EventHandler(this.saFKToolStripMenuItem_Click);
             // 
+            // izvestajiToolStripMenuItem
+            // 
+            this.izvestajiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.prviToolStripMenuItem,
+            this.drugiToolStripMenuItem,
+            this.treciToolStripMenuItem,
+            this.cetvrtiToolStripMenuItem});
+            this.izvestajiToolStripMenuItem.Name = "izvestajiToolStripMenuItem";
+            this.izvestajiToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.izvestajiToolStripMenuItem.Text = "Izvestaji";
+            // 
             // prviToolStripMenuItem
             // 
             this.prviToolStripMenuItem.Name = "prviToolStripMenuItem";
-            this.prviToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prviToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.prviToolStripMenuItem.Text = "prvi";
             // 
             // drugiToolStripMenuItem
             // 
             this.drugiToolStripMenuItem.Name = "drugiToolStripMenuItem";
-            this.drugiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.drugiToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.drugiToolStripMenuItem.Text = "drugi";
             // 
             // treciToolStripMenuItem
             // 
             this.treciToolStripMenuItem.Name = "treciToolStripMenuItem";
-            this.treciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.treciToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.treciToolStripMenuItem.Text = "treci";
             // 
             // cetvrtiToolStripMenuItem
             // 
             this.cetvrtiToolStripMenuItem.Name = "cetvrtiToolStripMenuItem";
-            this.cetvrtiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cetvrtiToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.cetvrtiToolStripMenuItem.Text = "cetvrti";
+            // 
+            // obradeToolStripMenuItem
+            // 
+            this.obradeToolStripMenuItem.Name = "obradeToolStripMenuItem";
+            this.obradeToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.obradeToolStripMenuItem.Text = "Obrade";
+            // 
+            // grid1ToolStripMenuItem
+            // 
+            this.grid1ToolStripMenuItem.Name = "grid1ToolStripMenuItem";
+            this.grid1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grid1ToolStripMenuItem.Text = "Grid 1";
+            this.grid1ToolStripMenuItem.Click += new System.EventHandler(this.grid1ToolStripMenuItem_Click);
             // 
             // Glavna
             // 
@@ -148,5 +157,6 @@ namespace _4_9_Forma
         private System.Windows.Forms.ToolStripMenuItem drugiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem treciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cetvrtiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grid1ToolStripMenuItem;
     }
 }

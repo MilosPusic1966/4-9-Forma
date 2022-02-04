@@ -16,7 +16,7 @@ namespace _4_9_Forma
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sifarnik());
+            Application.Run(new Glavna());
         }
     }
 }

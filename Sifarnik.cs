@@ -36,7 +36,15 @@ namespace _4_9_Forma
         private void button1_Click(object sender, EventArgs e)
         {
             DataTable menjano = podaci.GetChanges();
-            dataGridView2.DataSource = menjano;
+            // dataGridView2.DataSource = menjano;
+            adapter.UpdateCommand = new SqlCommandBuilder(adapter).GetUpdateCommand();
+            if (menjano != null)
+            {
+                adapter.Update(menjano);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            
         }
     }
 }

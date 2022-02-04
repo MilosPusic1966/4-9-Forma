@@ -26,6 +26,11 @@ namespace _4_9_Forma
         {
             SqlConnection veza = new SqlConnection(CS);
             adapter = new SqlDataAdapter("SELECT * FROM predmet", veza);
+            podaci = new DataTable();
+            adapter.Fill(podaci);
+            dataGridView1.DataSource = podaci;
+            // dataGridView1.Columns["id"].ReadOnly = true;
+            // dataGridView1.Columns["id"].Visible = false;
         }
     }
 }
